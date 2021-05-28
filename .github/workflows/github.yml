@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: apk-release
-        path: chandler/build/app/outputs
+        path: chandler/build/app/outputs/flutter-apk
