@@ -30,9 +30,9 @@ jobs:
       with:
         flutter-version: '2.2.1'
     - run: flutter pub get
-    - run: flutter build apk --release
-    - name: upload artifects
-      uses: actions/upload-artifact@master
+    - run: flutter build apk --releas
+    - uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: apk-release
-        path: chandler/build/app/outputs/flutter-apk
+        args: 'build/app/outputs/apk/release/app-release.apk'
