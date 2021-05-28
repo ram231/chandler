@@ -31,3 +31,8 @@ jobs:
         flutter-version: '2.2.1'
     - run: flutter pub get
     - run: flutter build apk --release
+    - name: upload artifects
+      uses: actions/upload-artifact@master
+      with:
+        name: apk-release
+        path: chandler/build/app/outputs
