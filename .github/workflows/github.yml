@@ -30,7 +30,7 @@ jobs:
       with:
         flutter-version: '2.2.1'
     - run: flutter pub get
-    - run: flutter build apk --releas
+    - run: flutter build apk --release
     - uses: skx/github-action-publish-binaries@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
